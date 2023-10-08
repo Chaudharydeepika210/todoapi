@@ -14,5 +14,3 @@ COPY --from=build /app ./
 
 ENTRYPOINT [ "dotnet", "todoapi.dll"]
 
-
-
