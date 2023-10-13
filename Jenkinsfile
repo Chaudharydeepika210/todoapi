@@ -16,5 +16,13 @@ pipeline{
                 echo "Integrated Test"
             }
         }
+        post{
+            successfull{
+                echo "I'm successfull"
+            }
+            fail{
+                echo "I failed"
+            }
+        }
     }
 }
