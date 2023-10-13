@@ -18,10 +18,10 @@ pipeline{
         }
     }
     post{
-        successfull{
+        success{
             echo "I'm successfull"
             }
-        fail{
+        failure{
             echo "I failed"
             }
         }
