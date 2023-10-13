@@ -1,10 +1,17 @@
 pipeline{
-    agent {docker { image 'mcr.microsoft.com/dotnet/sdk:7.0'} }
+    agent {
+        docker {
+            // Use a .NET SDK image with the version you need
+            image 'mcr.microsoft.com/dotnet/sdk:7.0'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
+    }
+    //agent {docker { image 'mcr.microsoft.com/dotnet/sdk:7.0'} }
  //   agent any
     stages {
         stage ('Build'){
             steps {
-                sh 'mvn --version'
+                sh 'dotnet --version'
                 echo "Build"
             }
         }
