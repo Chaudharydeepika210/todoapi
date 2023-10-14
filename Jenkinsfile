@@ -9,7 +9,7 @@ pipeline{
     //agent {docker { image 'alpine:3.17'} }
     agent any
     environment{
-        dockerHome = tool ''mydocker
+        dockerHome = tool 'mydocker'
         PATH = "$dockerHome/bin:$PATH"
     }
 
