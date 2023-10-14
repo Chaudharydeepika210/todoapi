@@ -11,11 +11,6 @@ pipeline{
     stages {
         stage ('Build'){
             steps {
-                docker {
-                    // Use a .NET SDK image with the version you need
-                    image 'mcr.microsoft.com/dotnet/sdk:7.0'
-                    args '-v /var/run/docker.sock:/var/run/docker.sock'
-                }
                 sh 'dotnet --version'
                 echo "Build"
             }
