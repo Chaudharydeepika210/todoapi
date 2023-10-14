@@ -6,12 +6,12 @@ pipeline{
     //         args '-v /var/run/docker.sock:/var/run/docker.sock'
     //     }
     // }
-    agent {docker { image 'alpine:3.17'} }
-    //agent any
+    //agent {docker { image 'alpine:3.17'} }
+    agent any
     stages {
         stage ('Build'){
             steps {
-                sh 'node --version'
+                //sh 'node --version'
                 echo "Build"
             }
         }
